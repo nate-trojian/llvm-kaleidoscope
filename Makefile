@@ -10,9 +10,9 @@ else
 	$(error Build mode $(BUILD_MODE) not supported by this Makefile)
 endif
 
-all:	llvm-kaleidoscope
+all:	main
 
-llvm-kaleidoscope:	$(OBJS)
+main:	$(OBJS)
 	$(CXX) -o $@ $^
 
 %.o:	$(PROJECT_ROOT)%.cpp
